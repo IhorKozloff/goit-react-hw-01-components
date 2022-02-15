@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { App } from 'components/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import react from 'react';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,3 +16,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+const test = react.createElement('header', {a:5, b:10, children: "qwe qwer qwerty"});
+console.log(test)
