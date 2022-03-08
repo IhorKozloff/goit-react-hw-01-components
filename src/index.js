@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom';
 import { App } from 'components/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import react from 'react';
+
+import user from 'components/data/user.json';
+import data from 'components/data/statistic-data.json';
+import friendsData from 'components/data/friends.json';
+import { Profile } from 'components/social-profile';
+import { Statistic } from 'components/statistics';
+import { FriendList } from 'components/friends-list';
+
+const root = document.querySelector('#root');
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,5 +24,27 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-const test = react.createElement('header', {a:5, b:10, children: "qwe qwer qwerty"});
-console.log(test)
+
+
+
+//// 1 ///////
+ReactDOM.render(<Profile 
+  userAvatar={user.avatar} 
+  userName={user.username} 
+  userTag={user.tag} 
+  userLocation={user.location} 
+  userFollowers={user.stats.followers} 
+  userViews={user.stats.views} 
+  userLikes={user.stats.likes}
+/>, root);
+
+
+///// 2 ////////
+ReactDOM.render(<Statistic
+  statsData={data}
+/>, root);
+
+///// 3 ////////
+ReactDOM.render(<FriendList
+  friends={friendsData}
+/>, root);
