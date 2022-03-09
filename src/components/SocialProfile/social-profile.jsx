@@ -1,34 +1,43 @@
 import PropTypes from "prop-types";
+import {
+    SocialProfileWrapper, 
+    AvatarImageWrapper, 
+    StatsList, 
+    StatsListItem
+} from 'components/SocialProfile/social-profile.styled';
 
 export const Profile = ({userAvatar, userName, userTag, userLocation, userFollowers, userViews, userLikes}) => {
     return (
-        <div className="profile">
+        <SocialProfileWrapper className="profile">
         <div className="description">
-        <img
-            src={userAvatar}
-            alt="User avatar"
-            className="avatar"
-        />
-        <p className="name">{userName}</p>
-        <p className="tag">{userTag}</p>
-        <p className="location">{userLocation}</p>
+            <AvatarImageWrapper>
+                <img
+                    src={userAvatar}
+                    alt="User avatar"
+                    className="avatar"
+                />
+            </AvatarImageWrapper>
+            
+            <p className="name">{userName}</p>
+            <p className="tag">@{userTag}</p>
+            <p className="location">{userLocation}</p>
         </div>
     
-        <ul className="stats">
-        <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{userFollowers}</span>
-        </li>
-        <li>
-            <span className="label">Views</span>
-            <span className="quantity">{userViews}</span>
-        </li>
-        <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{userLikes}</span>
-        </li>
-        </ul>
-    </div>          
+        <StatsList className="stats">
+            <StatsListItem>
+                <span className="label">Followers</span>
+                <span className="quantity">{userFollowers}</span>
+            </StatsListItem>
+            <StatsListItem>
+                <span className="label">Views</span>
+                <span className="quantity">{userViews}</span>
+            </StatsListItem>
+            <StatsListItem>
+                <span className="label">Likes</span>
+                <span className="quantity">{userLikes}</span>
+            </StatsListItem>
+        </StatsList>
+    </SocialProfileWrapper>          
     )
 };
 
