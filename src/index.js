@@ -4,12 +4,12 @@ import { App } from 'components/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-import user from 'components/data/user.json';
-import data from 'components/data/statistic-data.json';
-import friendsData from 'components/data/friends.json';
-import { Profile } from 'components/social-profile';
-import { Statistic } from 'components/statistics';
-import { FriendList } from 'components/friends-list';
+import user from 'components/SocialProfile/user.json';
+import data from 'components/Statistics/statistic-data.json';
+import friendsData from 'components/FriendList/friends.json';
+import { Profile } from 'components/SocialProfile/social-profile';
+import { Statistic } from 'components/Statistics/statistics';
+import { FriendList } from 'components/FriendList/friends-list';
 
 const root = document.querySelector('#root');
 
