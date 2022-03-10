@@ -7,10 +7,13 @@ import './index.css';
 import user from 'components/SocialProfile/user.json';
 import data from 'components/Statistics/statistic-data.json';
 import friendsData from 'components/FriendList/friends.json';
+import transactionData from 'components/TransactionsHistory/transactions.json';
+
 import { Main } from 'components/globalStyles.styled';
 import { Profile } from 'components/SocialProfile/social-profile';
 import { Statistic } from 'components/Statistics/statistics';
 import { FriendList } from 'components/FriendList/friends-list';
+import { TransactionHistory } from 'components/TransactionsHistory/transactions-history';
 
 const refs = {
   root: document.querySelector('#root'),
@@ -73,3 +76,12 @@ function onbtnHwt3 () {
 };
 
 refs.btnHwt3El.addEventListener('click', onbtnHwt3);
+
+///// 4 ////////
+function onbtnHwt4 () {
+  ReactDOM.render(<TransactionHistory
+    items={transactionData}
+  />, refs.root);
+};
+
+refs.btnHwt4El.addEventListener('click', onbtnHwt4);

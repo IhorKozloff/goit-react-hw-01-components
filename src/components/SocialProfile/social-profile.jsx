@@ -2,6 +2,9 @@ import PropTypes from "prop-types";
 import {
     SocialProfileWrapper, 
     AvatarImageWrapper, 
+    UserNickName,
+    StyledGrayTxt,
+    StyledGrayTxtSpan,
     StatsList, 
     StatsListItem
 } from 'components/SocialProfile/social-profile.styled';
@@ -9,35 +12,35 @@ import {
 export const Profile = ({userAvatar, userName, userTag, userLocation, userFollowers, userViews, userLikes}) => {
     return (
         <SocialProfileWrapper className="profile">
-        <div className="description">
-            <AvatarImageWrapper>
-                <img
-                    src={userAvatar}
-                    alt="User avatar"
-                    className="avatar"
-                />
-            </AvatarImageWrapper>
-            
-            <p className="name">{userName}</p>
-            <p className="tag">@{userTag}</p>
-            <p className="location">{userLocation}</p>
-        </div>
-    
-        <StatsList className="stats">
-            <StatsListItem>
-                <span className="label">Followers</span>
-                <span className="quantity">{userFollowers}</span>
-            </StatsListItem>
-            <StatsListItem>
-                <span className="label">Views</span>
-                <span className="quantity">{userViews}</span>
-            </StatsListItem>
-            <StatsListItem>
-                <span className="label">Likes</span>
-                <span className="quantity">{userLikes}</span>
-            </StatsListItem>
-        </StatsList>
-    </SocialProfileWrapper>          
+            <div className="description">
+                <AvatarImageWrapper>
+                    <img
+                        src={userAvatar}
+                        alt="User avatar"
+                        className="avatar"
+                    />
+                </AvatarImageWrapper>
+                
+                <UserNickName className="name">{userName}</UserNickName>
+                <StyledGrayTxt className="tag">@{userTag}</StyledGrayTxt>
+                <StyledGrayTxt className="location">{userLocation}</StyledGrayTxt>
+            </div>
+
+            <StatsList className="stats">
+                <StatsListItem>
+                    <StyledGrayTxtSpan className="label">Followers</StyledGrayTxtSpan>
+                    <b className="quantity">{userFollowers}</b>
+                </StatsListItem>
+                <StatsListItem>
+                    <StyledGrayTxtSpan className="label">Views</StyledGrayTxtSpan>
+                    <b className="quantity">{userViews}</b>
+                </StatsListItem>
+                <StatsListItem>
+                    <StyledGrayTxtSpan className="label">Likes</StyledGrayTxtSpan>
+                    <b className="quantity">{userLikes}</b>
+                </StatsListItem>
+            </StatsList>
+        </SocialProfileWrapper>          
     )
 };
 

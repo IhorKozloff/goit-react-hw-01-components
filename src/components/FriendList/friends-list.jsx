@@ -1,4 +1,4 @@
-import { FriendsSchedule, ScheduleItem, StatusOnline, StatusOffline } from 'components/FriendList/friend-list.styled';
+import { FriendsSchedule, ScheduleItem, StatusOnline, StatusOffline, FriendName } from 'components/FriendList/friend-list.styled';
 
 export const FriendList = ({friends}) => (
     <FriendsSchedule className="friend-list">
@@ -9,8 +9,8 @@ export const FriendList = ({friends}) => (
                     ? <StatusOnline/>
                     : <StatusOffline/>}
                 </span>
-                <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                <p className="name">{name}</p>
+                <img className="avatar" src={avatar} alt="User avatar" width="80" />
+                <FriendName className="name">{name}</FriendName>
             </ScheduleItem>
         ))}
     </FriendsSchedule>

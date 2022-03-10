@@ -3,21 +3,22 @@ import styled from '@emotion/styled';
 export const SocialProfileWrapper = styled.div`
     
     width: 250px;
-    padding-top: 40px;
+    padding-top: 20px;
     background-color: #FFF;
     border-radius: 10px;
     border: 1px solid rgb(200, 202, 202);
-    p {
+    p, b {
         text-align: center;
     };
     overflow: hidden;
 `;
 
+
 export const AvatarImageWrapper = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
-    border-radius: 50px;
+    border-radius: 75px;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -28,6 +29,15 @@ export const AvatarImageWrapper = styled.div`
         width: 98%;
         height: 98%;
     };
+`;
+export const UserNickName = styled.p`
+    font-weight: bolder;
+`;
+export const StyledGrayTxt = styled.p`
+    color: #bac1c9;
+`;
+export const StyledGrayTxtSpan = styled.span`
+    color: #bac1c9;
 `;
 
 export const StatsList = styled.ul`
@@ -47,7 +57,7 @@ export const StatsListItem = styled.li`
     :not(:last-child) {
         border-right: 1px solid #e8edf3;
     };
-    span {
+    span, b {
         display: block;
         text-align: center;
     };
