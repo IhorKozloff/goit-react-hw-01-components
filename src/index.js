@@ -59,9 +59,10 @@ refs.btnHwt1El.addEventListener('click', onbtnHwt1);
 
 ///// 2 ////////
 function onbtnHwt2 () {
-  ReactDOM.render(<Statistic
-    statsData={data}
-  />, refs.root);
+  ReactDOM.render(
+  <Main>
+    <Statistic statsData={data}/>
+  </Main>, refs.root);
 };
 
 refs.btnHwt2El.addEventListener('click', onbtnHwt2);
@@ -70,9 +71,10 @@ refs.btnHwt2El.addEventListener('click', onbtnHwt2);
 
 ///// 3 ////////
 function onbtnHwt3 () {
-  ReactDOM.render(<FriendList
-    friends={friendsData}
-  />, refs.root);
+  ReactDOM.render(
+  <Main>
+    <FriendList friends={friendsData}/>
+  </Main>, refs.root);
 };
 
 refs.btnHwt3El.addEventListener('click', onbtnHwt3);
