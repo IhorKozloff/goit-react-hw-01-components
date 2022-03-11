@@ -6,7 +6,7 @@ export const BtnWrapper = styled.div`
     padding-top: 20px;
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 30%;
     button {
         padding: 5px 10px;
         margin-right: 10px;
