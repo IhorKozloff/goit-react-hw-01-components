@@ -53,3 +53,4 @@ Profile.propTypes = {
     userViews: PropTypes.number,
     userLikes: PropTypes.number,
   };
+ 

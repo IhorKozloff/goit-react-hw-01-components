@@ -1,25 +1,27 @@
+import { TransactionTable, TransactionTableHead, TransactionTableHeadItem, TransactionTableRow, TransactionTableItem } from 'components/TransactionsHistory/transaction-history.styled';
+
 export const TransactionHistory = ({items}) =>
 (
-    <table className="transaction-history">
-        <thead>
+    <TransactionTable className="transaction-history">
+        <TransactionTableHead>
             <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
+                <TransactionTableHeadItem>Type</TransactionTableHeadItem>
+                <TransactionTableHeadItem>Amount</TransactionTableHeadItem>
+                <TransactionTableHeadItem>Currency</TransactionTableHeadItem>
             </tr>
-        </thead>
+        </TransactionTableHead>
 
         <tbody>
             { items.map(item => {
                 return (
-                    <tr key={item.id}>
-                        <td>{item.type}</td>
-                        <td>{item.amount}</td>
-                        <td>{item.currency}</td>  
-                    </tr>
+                    <TransactionTableRow key={item.id}>
+                        <TransactionTableItem>{item.type}</TransactionTableItem>
+                        <TransactionTableItem>{item.amount}</TransactionTableItem>
+                        <TransactionTableItem>{item.currency}</TransactionTableItem>  
+                    </TransactionTableRow>
                 )
                 })
-            };
+            }
         </tbody>
-    </table>
+    </TransactionTable>
 );
