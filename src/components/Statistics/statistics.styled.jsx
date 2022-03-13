@@ -2,9 +2,11 @@ import styled from '@emotion/styled';
 
 
 export const StatisticsSection = styled.section`
-    width: 400px;
+    max-width: 420px;
     background-color: #fff;
     padding-top: 30px;
+    font-size: 18px;
+    margin: 20px;
 `;
 export const SectionTittle = styled.h2`
     text-align: center;
@@ -28,10 +30,11 @@ export const StatisticListItem = styled.li`
         color: #fff;
     }
     padding: 10px 5px;
-    flex-basis: 50px;
+    flex-basis: 30px;
     flex-grow: 1;
 `;
 export const PercentValue = styled.span`
    font-size: 22px;
+   font-weight: bolder;
    margin-top: 10px;
 `;

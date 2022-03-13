@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const TransactionTable = styled.table`
-    width: 600px;
+    max-width: 420px;
     border: 1px solid #FFF;
-    margin: 0;
+    margin: 20px;
     padding: 0;
+    font-size: 18px;
 `;
 export const TransactionTableHead = styled.thead`
     background-color: #00bcd5;
