@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 
 export const StatisticsSection = styled.section`
-    max-width: 420px;
+    width: 420px;
     background-color: #fff;
     padding-top: 30px;
     font-size: 18px;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const FriendsSchedule = styled.ul`
     list-style: none;
-    max-width: 420px;
+    width: 420px;
     margin: 20px;
     padding: 0;
     
@@ -34,4 +34,5 @@ export const FriendName = styled.p`
     font-weight: bolder;
     font-size: 36px;
     margin-left: 10px;
+    text-transform: capitalize;
 `;

@@ -19,7 +19,7 @@ export const Statistic = ({statsData}) =>
         
         return ((
            <StatisticListItem key={id} className="item" style={{backgroundColor: getRandomColor()}}>
-             <span className="label">{label}</span>
+             <span className="label" style={{textTransform: 'lowercase'}}>{label}</span>
              <PercentValue className="percentage">{percentage}%</PercentValue>
            </StatisticListItem>
          ))

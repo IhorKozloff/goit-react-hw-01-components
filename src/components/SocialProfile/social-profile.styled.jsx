@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const SocialProfileWrapper = styled.div`
     
-    max-width: 420px;
+    width: 250px;
     margin: 20px;
     padding-top: 20px;
     background-color: #FFF;
@@ -12,6 +12,7 @@ export const SocialProfileWrapper = styled.div`
         text-align: center;
     };
     font-size: 18px;
+    text-transform: capitalize;
     overflow: hidden;
 `;
 

@@ -22,7 +22,7 @@ export const Profile = ({userAvatar, userName, userTag, userLocation, userFollow
                 </AvatarImageWrapper>
                 
                 <UserNickName className="name">{userName}</UserNickName>
-                <StyledGrayTxt className="tag">@{userTag}</StyledGrayTxt>
+                <StyledGrayTxt className="tag" style={{textTransform: 'lowercase'}}>@{userTag}</StyledGrayTxt>
                 <StyledGrayTxt className="location">{userLocation}</StyledGrayTxt>
             </div>
 
