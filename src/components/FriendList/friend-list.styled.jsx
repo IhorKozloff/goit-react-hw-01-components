@@ -19,16 +19,10 @@ export const StatusOnline = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: green;
+    background-color: ${props => (props.onlineStatus ? 'green' : 'red')};
     margin-right: 10px;
 `;
-export const StatusOffline = styled.div`
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: red;
-    margin-right: 10px;
-`;
+
 export const FriendName = styled.p`
     margin: 0;
     font-weight: bolder;

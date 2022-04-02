@@ -32,8 +32,8 @@ export const Statistic = ({statsData}) =>
 
 Statistic.propTypes = {
     
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
  
-  };
+};
