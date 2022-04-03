@@ -19,8 +19,8 @@ export const FriendList = ({friends}) => (
 
 
 FriendList.propTypes = {
-    avatar: PropTypes.number,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-    id: PropTypes.number,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
 }

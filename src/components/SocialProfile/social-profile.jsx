@@ -45,12 +45,12 @@ export const Profile = ({userAvatar, userName, userTag, userLocation, userFollow
 };
 
 Profile.propTypes = {
-    userAvatar: PropTypes.string,
-    userName: PropTypes.string,
-    userTag: PropTypes.string,
-    userLocation: PropTypes.string,
-    userFollowers: PropTypes.number,
-    userViews: PropTypes.number,
-    userLikes: PropTypes.number,
+    userAvatar: PropTypes.string.isRequired,
+    userName: PropTypes.string.isRequired,
+    userTag: PropTypes.string.isRequired,
+    userLocation: PropTypes.string.isRequired,
+    userFollowers: PropTypes.number.isRequired,
+    userViews: PropTypes.number.isRequired,
+    userLikes: PropTypes.number.isRequired,
   };
  
